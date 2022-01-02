@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "add30921-4f28-4b31-a30c-3e652bf65b11",
+		"name": "login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/v1/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"hermina.bradtke@example.org\",\"password\":\"12345678\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"sample2\",\"body\":\"sample2\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo?is_complete=1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"sample2\",\"body\":\"sample2\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo?is_complete=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo"
+					],
+					"query": [
+						{
+							"key": "is_complete",
+							"value": "1"
+						}
+					]
+				},
+				"description": "completed todo items"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo?is_complete=0",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"sample2\",\"body\":\"sample2\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo?is_complete=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo"
+					],
+					"query": [
+						{
+							"key": "is_complete",
+							"value": "0"
+						}
+					]
+				},
+				"description": "not completed todo items"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attachment_file",
+							"contentType": "",
+							"type": "file",
+							"src": "/C:/Users/TPC/Desktop/rahi200.jpeg",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "abc alias at consequatur tenetur eligendi.",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "body",
+							"value": "Nam eaque minima voluptates. Officia magni nihil dicta. Quaerat non assumenda provident doloremque error.",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "due_date",
+							"value": "2022-01-02 03:01:11",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "is_complete",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo"
+					]
+				},
+				"description": "create todo item"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo/117",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attachment_file",
+							"contentType": "",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "title",
+							"value": "abc alias at consequatur tenetur eligendi updated.",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "Nam eaque minima voluptates. Officia magni nihil dicta. Quaerat non assumenda provident doloremque error.",
+							"type": "default"
+						},
+						{
+							"key": "due_date",
+							"value": "2022-01-02 03:01:11",
+							"type": "default"
+						},
+						{
+							"key": "is_complete",
+							"value": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo/119",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"119"
+					]
+				},
+				"description": "update todo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo-update-status/51",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_complete\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo-update-status/51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo-update-status",
+						"51"
+					]
+				},
+				"description": "change status of to do item"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo/49",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_complete\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo/49",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"49"
+					]
+				},
+				"description": "delete to do item"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/todo-add-reminder",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"connection": true,
+					"host": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_token",
+						"value": "alhSaEZZd1JTNWpRREwwVGxXQjdrZHExSENtWlBNbEs=",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "todo_id",
+							"value": "120",
+							"type": "default"
+						},
+						{
+							"key": "reminder_date",
+							"value": "2022-01-04 19:01:11",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/todo-add-reminder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"todo-add-reminder"
+					]
+				},
+				"description": "add reminder"
+			},
+			"response": []
+		}
+	]
+}
